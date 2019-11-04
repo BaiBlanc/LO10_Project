@@ -3,8 +3,8 @@ const fs = require("fs")
 
 class Database {
     constructor() {
-        this.host = 'bfm.cygzoqusiupx.us-east-2.rds.amazonaws.com'
-        this.user = 'admin'
+        this.host = 'lo10-bfm.co016rps22pg.eu-west-3.rds.amazonaws.com'
+        this.user = 'bfm'
         this.password = '12345678'
         this.database = 'lo10'
         this.port = 3306
