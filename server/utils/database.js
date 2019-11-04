@@ -3,8 +3,8 @@ const fs = require("fs")
 
 class Database {
     constructor() {
-        this.host = 'lo10-bfm.co016rps22pg.eu-west-3.rds.amazonaws.com'
-        this.user = 'bfm'
+        this.host = 'bfm.cygzoqusiupx.us-east-2.rds.amazonaws.com'
+        this.user = 'admin'
         this.password = '12345678'
         this.database = 'lo10'
         this.port = 3306
@@ -20,23 +20,25 @@ class Database {
             database: this.database,
             port: this.port
         })
-        this.connection.connect( (error) => {
+        this.connection.connect((error) => {
             if (error) {
-                console.error(this.count+error)
+                console.error(this.count + error)
                 this.count += 1
                 if (this.count <= 3) {
                     setTimeout(() => {
                         this.connect()
                     }, 5000)
+                } else {
+                    this.count = 0
                 }
             }
-            else{
+            else {
                 this.count = 0
                 console.info("Connected")
-            } 
-            
+            }
+
         })
-        
+
     }
 
     /**
