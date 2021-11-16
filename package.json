@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/BaiBlanc/LO10_Project#readme",
   "dependencies": {
-    "aws-sdk": "^2.470.0",
+    "aws-sdk": "^2.814.0",
     "elasticemail": "^0.2.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
